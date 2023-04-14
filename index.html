@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Mass Index Calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!--This is the main body-->
+    <div class="container">
+        <h1>
+            <span style="color:blue">B</span>ody <span style="color:blue">M</span>ass <span style="color:blue">I</span>ndex Calculator
+        </h1>
+        <!--This is the box inside the main body-->
+        <div class="box">
+           <!--This is for the contents inside the box-->
+            <div class="content">
+                <!--This is for the first line containing age and gender-->
+               <div class="firstline">
+                    <!--This for age-->
+                  <div class="age">
+                     <input type="number" class="text-input" id="age" required/>
+                     <span class="text">Age</span>
+                  </div>
+                  
+                  <!--For Gender-->
+                  <label class="gender">
+                    <!--For male-->
+                    <div class="man">
+                        <span class="text">Male</span>
+                        <input type="radio" name="radio" id="m">
+                    </div>
+                       
+                    <div class="women">
+                         <span class="text">Female</span>
+                         <input type="radio" name="radio" id="f">
+                    </div>
+                         
+                       
+                       
+   
+                  </label>
+               </div>
+
+               <!--This is for second line containing height and weight-->
+               <div class="secondline">
+                
+                   <div class="inputH">
+                       <input type="number" class="text-input" id="height" required>
+                       <span class="text">Height(cm)</span>
+                   </div>
+
+                   <div class="inputW">
+                      <input type="number" class="text-input" id="weight" required>
+                      <span class="text">Weight(kg)</span>
+                   </div>
+                
+               </div>
+
+               <!--For submit button-->
+               <div class="sub">
+                    <button class="calculate" id="submit" onclick="calculate();">Submit</button>
+               </div>
+                     
+
+
+            </div>
+                
+
+        </div>
+
+        <!--Output-->
+         <div class="res">
+           <p> Your BMI is:</p>
+           <div id="result">
+            00.00
+        </div>
+        <p class="comment"></p>         
+         </div>
+
+    </div>
+
+
+    <!--The Modal-->
+    <div id="myModal" class="modal">
+        <!--Modal content-->
+
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalText"></p>
+        </div>
+    </div>
+
+    <!--Here javascript is implemented-->
+    <script src="index.js"></script>
+</body>
+</html>
